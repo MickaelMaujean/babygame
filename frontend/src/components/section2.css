@@ -1,0 +1,60 @@
+/* src/components/Section2.css */
+.section2 {
+    background-color: #88c7ee; /* Light pink background */
+    color: white;              /* White text color */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .section2 input[type="text"] {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #070707;
+    border-radius: 4px;
+    margin-top: 5px;
+  }
+  
+  .section2 button {
+    padding: 10px 20px;
+    background-color: #f699c7; /* Light pink color */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px;
+  }
+  
+  .section2 button:hover {
+    background-color: #f079b8; /* Darker pink color on hover */
+  }
+
+/* CSS for section2 input fields */
+.section2-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px; /* Add vertical spacing between input fields */
+}
+
+/* Style for individual input field containers */
+.section2-fields > div {
+  display: flex;
+  align-items: center;
+  margin-left: 200px;
+  margin-right: 200px; /* Center items vertically within each input field container */
+}
+
+/* Style for input labels */
+.section2-fields label {
+  min-width: 120px; /* Set a minimum width for labels to create consistent spacing */
+  margin-right: 10px; /* Add spacing between labels and input fields */
+}
+
+/* Style for input elements */
+.section2-fields input {
+  flex-grow: 1; /* Allow input fields to grow and take up available space */
+}
+
+  

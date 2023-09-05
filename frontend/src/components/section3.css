@@ -1,0 +1,104 @@
+/* src/components/Section3.css */
+.section3 {
+  background-color: #FFB6C1; /* Light pink background */
+  color: white;              /* White text color */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.section3 input[type="text"] {
+  padding: 10px;
+  width: 100%;
+  border: 1px solid #f00707;
+  border-radius: 4px;
+  margin-top: 5px;
+}
+
+.section3 button {
+  padding: 10px 20px;
+  background-color: #a3dcf6; /* Light pink color */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.section3 button:hover {
+  background-color: #6b96f3; /* Darker pink color on hover */
+}
+
+.section3-table {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* Style table headers */
+th {
+  background-color: #ea91c0;
+  text-align: left;
+  padding: 12px; /* Increase padding for headers for better spacing */
+}
+
+/* Style table data cells */
+td {
+  text-align: left;
+  padding: 12px; /* Increase padding for cells for better spacing */
+  border: 1px solid #ddd;
+  word-wrap: break-word; /* Allow text to wrap within cells */
+  max-width: none; /* Remove the maximum width for cells */
+  overflow: hidden;
+  text-overflow: ellipsis; /* Add ellipsis (...) for text overflow */
+}
+
+/* Edit pop */
+
+.edit-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-container {
+  /* Style for the button container section */
+  text-align: center;
+}
+
+.button-containers button {
+  /* Style for buttons */
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button-containers button:hover {
+  /* Style for button hover state */
+  background-color: #0056b3;
+}
+
+.edit-title {
+  text-align: center;
+  color:white
+}
+
+
+
+
+  
