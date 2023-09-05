@@ -15,6 +15,7 @@ function Section1({ content }) {
       <p>- Et enfin la date de naissance, vous devez également renseigner l'heure estimée &#x23F0;</p>
       <p>- Le bouton "send" enregistra votre vote &#x1F48C;</p>
       
+      
     </div>
   );
 }
