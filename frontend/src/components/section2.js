@@ -17,6 +17,8 @@ function Section2() {
 
   const [responseMessage, setResponseMessage] = useState(''); // State to store the response message
 
+  const apiBaseUrl = process.env.REACT_APP_BACKEND_URL;
+
 
   const handleSend = async () => {
     try {
@@ -31,7 +33,6 @@ function Section2() {
         birthday: dateTimeToSend,
       });
 
-      const apiBaseUrl = process.env.BACKEND_LOCALHOST_URL;
   
       const response = await axios.post('${apiBaseUrl}/create_vote', {
         first_name,
