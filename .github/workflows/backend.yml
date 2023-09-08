@@ -1,0 +1,30 @@
+#name: Backend Deployment
+
+#on:
+#  push:
+#    branches:
+#      - 'test*'  # Match all branches starting with "test"
+#      - main
+
+#jobs:
+#  deploy:
+#    runs-on: macos-latest
+
+#    steps:
+#      - name: Checkout Code
+#        uses: actions/checkout@v2
+
+#      - name: Set Environment Variables
+#        run: |
+#          if [[ $GITHUB_REF == refs/heads/main ]]; then
+#            cp backend/.env.prod backend/.env
+#          elif [[ $GITHUB_REF == refs/heads/test* ]]; then
+#            cp backend/.env backend/.env
+#          fi
+
+#      - name: Build and Deploy Backend
+#        run: |
+#          # Add commands to build and deploy your backend application here
+#          # For example, for FastAPI:
+#         # pip install -r backend/requirements.txt
+#          # uvicorn backend.app:app --host 0.0.0.0 --port 8000

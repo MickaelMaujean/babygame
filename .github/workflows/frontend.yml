@@ -1,0 +1,31 @@
+#name: Frontend Deployment
+
+#on:
+#  push:
+#    branches:
+#      - 'test*'  # Match all branches starting with "test"
+#      - main
+
+#jobs:
+#  deploy:
+#    runs-on: macos-latest
+
+#    steps:
+#      - name: Checkout Code
+#        uses: actions/checkout@v2
+
+#     - name: Set Environment Variables
+#        run: |
+#          if [[ $GITHUB_REF == refs/heads/main ]]; then
+#            cp frontend/.env.prod frontend/.env
+#          elif [[ $GITHUB_REF == refs/heads/test* ]]; then
+#            cp frontend/.env frontend/.env
+#          fi
+
+#     - name: Build and Deploy Frontend
+#        run: |
+#          # Add commands to build and deploy your frontend application here
+#          # For example:
+#          # npm install
+#          # npm run build
+# Copy the build artifacts to a web server or hosting service

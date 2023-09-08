@@ -34,7 +34,7 @@ function Section2() {
       });
 
   
-      const response = await axios.post('${apiBaseUrl}/create_vote', {
+      const response = await axios.post(`${apiBaseUrl}/create_vote`, {
         first_name,
         last_name,
         gender,
