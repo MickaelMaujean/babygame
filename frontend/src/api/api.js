@@ -1,7 +1,7 @@
 // src/api/api.js
 import axios from 'axios';
 
-const apiBaseUrl = process.env.BACKEND_LOCALHOST_URL;
+const apiBaseUrl = process.env.REACT_APP_BACKEND_URL;
 
 const api = axios.create({
   baseURL: apiBaseUrl, // FastAPI backend URL
