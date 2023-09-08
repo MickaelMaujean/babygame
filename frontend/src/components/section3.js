@@ -8,6 +8,7 @@ const [data, setData] = useState([]);
 const [isUpdating, setIsUpdating] = useState(false);
 
 const apiBaseUrl = process.env.REACT_APP_BACKEND_URL;
+console.log("apiBaseUrl:", apiBaseUrl);
 
 
 const [votes, setVotes] = useState(null); // Your votes data
@@ -27,7 +28,7 @@ try {
 setIsUpdating(true);
 
 
-const response = await axios.get('${apiBaseUrl}/votes');
+const response = await axios.get(`${apiBaseUrl}/votes`);
 
 
 if (Array.isArray(response.data) && response.data.length > 0) {
