@@ -7,7 +7,7 @@ function Section3() {
 const [data, setData] = useState([]);
 const [isUpdating, setIsUpdating] = useState(false);
 
-const apiBaseUrl = process.env.BACKEND_LOCALHOST_URL;
+const apiBaseUrl = process.env.REACT_APP_BACKEND_URL;
 
 
 const [votes, setVotes] = useState(null); // Your votes data
