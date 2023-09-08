@@ -30,8 +30,10 @@ function Section2() {
         weight: parseFloat(weight),
         birthday: dateTimeToSend,
       });
+
+      const apiBaseUrl = process.env.BACKEND_LOCALHOST_URL;
   
-      const response = await axios.post('http://127.0.0.1:8000/create_vote', {
+      const response = await axios.post('${apiBaseUrl}/create_vote', {
         first_name,
         last_name,
         gender,

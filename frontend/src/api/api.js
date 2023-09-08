@@ -1,8 +1,10 @@
 // src/api/api.js
 import axios from 'axios';
 
+const apiBaseUrl = process.env.BACKEND_LOCALHOST_URL;
+
 const api = axios.create({
-  baseURL: 'http://localhost:8000', // FastAPI backend URL
+  baseURL: apiBaseUrl, // FastAPI backend URL
 });
 
 export const fetchData = async () => {
