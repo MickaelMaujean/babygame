@@ -7,6 +7,8 @@ function Section3() {
 const [data, setData] = useState([]);
 const [isUpdating, setIsUpdating] = useState(false);
 
+const apiBaseUrl = process.env.BACKEND_LOCALHOST_URL;
+
 
 const [votes, setVotes] = useState(null); // Your votes data
 const [editVote, setEditVote] = useState(null); // State to track the vote being edited
@@ -25,7 +27,7 @@ try {
 setIsUpdating(true);
 
 
-const response = await axios.get('http://127.0.0.1:8000/votes');
+const response = await axios.get('${apiBaseUrl}/votes');
 
 
 if (Array.isArray(response.data) && response.data.length > 0) {
@@ -98,7 +100,7 @@ setEditedFields({ ...editedFields, [fieldName]: value });
 const handleUpdateClick = async () => {
 try {
 // Send a PUT request to update the vote
-const response = await axios.put(`http://127.0.0.1:8000/update_vote/${editVote.id}`, editedFields);
+const response = await axios.put(`${apiBaseUrl}/update_vote/${editVote.id}`, editedFields);
 console.log('Update response:', response);
 // Update the local state (data) with the edited vote
 const updatedData = data.map((item) => (item.id === editVote.id ? { ...item, ...editedFields } : item));
