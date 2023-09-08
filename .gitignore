@@ -1,6 +1,6 @@
-babyenv/
-frontend/node_modules/
-frontend/package-lock.json
-__pycache__
+babygame/babyenv/
+babygame/frontend/node_modules/
+babygame/frontend/package-lock.json
+babygame/backend/app/__pycache__
 .env.prod
-env
+.env
