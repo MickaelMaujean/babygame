@@ -1,0 +1,15 @@
+name: babygame
+services:
+- environment_slug: python
+  github:
+    branch: main
+    deploy_on_push: true
+    repo: MickaelMaujean/babygame
+  source_dir: backend
+  http_port: 8080
+  instance_count: 1
+  instance_size_slug: basic-xxs
+  name: babygame
+  routes:
+  - path: /
+  run_command: uvicorn app.main:app
