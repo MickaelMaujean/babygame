@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from . import models
-from .routers import votes
+from .routers import votes, users
 from .database import engine
 from .config import settings
 
@@ -17,6 +17,7 @@ app.add_middleware(
 )
 
 app.include_router(votes.router)
+app.include_router(users.router)
 
 @app.get("/")
 async def root():
