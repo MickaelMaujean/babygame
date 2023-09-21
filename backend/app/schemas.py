@@ -35,10 +35,18 @@ class CreateVote(VoteBase):
 # Pydantic model for the response
 class Vote(VoteBase):
     id : int
-    #owner_id : int
-    #owner : UserOut
+    owner_id : int
+    owner : UserOut
     #created_at : datetime
 
     #to make sure it converts to dict() - see doc
     class Config:
         from_attributes = True
+
+
+class Token(BaseModel):
+    access_token : str
+    token_type : str
+
+class TokenData(BaseModel):
+    id : Optional[str] = None
