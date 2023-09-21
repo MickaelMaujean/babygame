@@ -1,6 +1,7 @@
-from sqlalchemy import Column, Integer, String, Boolean, Float, Date, Time, DateTime
+from sqlalchemy import Column, Integer, String, Boolean, Float, Date, Time, DateTime, ForeignKey
 from sqlalchemy.sql.expression import null, func, text
 from sqlalchemy.sql.sqltypes import TIMESTAMP
+from sqlalchemy.orm import relationship
 from .database import Base
 
 class Votes(Base):
@@ -13,7 +14,10 @@ class Votes(Base):
     size = Column(Float, nullable=False)
     weight = Column(Float, nullable=False)
     birthday = Column(DateTime, nullable=False)
+    owner_id = Column(Integer, ForeignKey("users.id", ondelete="CASCADE"), nullable=False)
     created_at = Column(TIMESTAMP(timezone=True), nullable=False, server_default=text('now()'))
+
+    owner = relationship("User")
 
 class User(Base):
     __tablename__ = "users"

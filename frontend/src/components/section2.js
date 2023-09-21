@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import axios from 'axios';
 import './section2.css';
+import apiInstance from '../api/api';
 
 function Section2() {
   const currentDate = new Date();
@@ -19,6 +20,7 @@ function Section2() {
 
   const apiBaseUrl = process.env.REACT_APP_BACKEND_URL;
 
+  
 
   const handleSend = async () => {
     try {
@@ -32,24 +34,38 @@ function Section2() {
         weight: parseFloat(weight),
         birthday: dateTimeToSend,
       });
-
   
-      const response = await axios.post(`${apiBaseUrl}/create_vote`, {
-        first_name,
-        last_name,
-        gender,
-        size: parseFloat(size),
-        weight: parseFloat(weight), // Convert to float before sending
-        birthday: dateTimeToSend,
-      });
-      console.log('Server response:', response);
+      // Retrieve the token from local storage
+      const token = localStorage.getItem('token');
   
-      if (response.status === 201) {
-        // If status code is 201 (Created), set a success message
-        setResponseMessage('Merci votre vote a bien été pris en compte');
+      // Check if the token is present
+      if (token) {
+        // Set the Authorization header with the token
+        apiInstance.defaults.headers.common['Authorization'] = `Bearer ${token}`;
+        
+        // Make the POST request
+        const response = await apiInstance.post(`${apiBaseUrl}/create_vote`, {
+          first_name,
+          last_name,
+          gender,
+          size: parseFloat(size),
+          weight: parseFloat(weight),
+          birthday: dateTimeToSend,
+        });
+  
+        console.log('Server response:', response);
+  
+        if (response.status === 201) {
+          // If status code is 201 (Created), set a success message
+          setResponseMessage('Merci votre vote a bien été pris en compte');
+        } else {
+          // For other status codes, you can set an error message or handle it as needed
+          setResponseMessage('An error occurred. Please try again.');
+        }
       } else {
-        // For other status codes, you can set an error message or handle it as needed
-        setResponseMessage('An error occurred. Please try again.');
+        // Handle the case when the token is not found in localStorage
+        console.warn('Token not found in localStorage.');
+        // You may want to redirect to a login page or display an error message.
       }
     } catch (error) {
       console.error('Error sending data:', error);
@@ -57,6 +73,7 @@ function Section2() {
       setResponseMessage('An error occurred. Please try again.');
     }
   };
+  
   
 
   return (
