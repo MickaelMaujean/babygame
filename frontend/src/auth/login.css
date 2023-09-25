@@ -180,9 +180,9 @@ html, body {
     .login-container {
       max-width: 100px;
       padding: 5px;
-      margin-top: 130/4px;
-      margin-left: 150px;
-      position: relative;
+      margin-top: 50%;
+      margin-left: 50%;
+      position: absolute;
       bottom:210/4px;
     }
     
