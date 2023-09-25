@@ -7,7 +7,7 @@
   @media (max-width: 768px) {
     .alpes {
       position: absolute;
-      height: 10%;
+      height: 5%;
       width: 15%;
       left:5%;
       top:50%;
@@ -15,7 +15,7 @@
   
     .grotte-glace {
       position: absolute;
-      height: 10%;
+      height: 5%;
       width: 15%;
       right :20%;
       top:50%;
