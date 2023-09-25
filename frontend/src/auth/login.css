@@ -170,50 +170,162 @@ html, body {
 
   @media (max-width: 768px) {
     .login-container {
-      max-width: 100%; /* Full width on mobile */
-      padding: 20px;
-      margin: 0 auto; /* Center the container horizontally */
+      max-width: 100px;
+      padding: 5px;
+      margin-top: 130/4px;
+      margin-left: 260/4px;
       position: relative;
-      bottom: 0; /* Reset the bottom position */
+      bottom:210/4px;
+    }
+    
+    h2 {
+      text-align: center;
+    }
+    
+    input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+    
+    .login-button {
+      width: 100%;
+      padding: 10px;
+      background-color: #f1aef8;
+      margin-bottom: 10px;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    
+    .login-button:hover {
+      background-color: #0056b3;
     }
   
-    /* You may want to remove or adjust the following styles for mobile */
-    .login-button,
     .register-button {
-      width: auto; /* Let buttons adjust to content on mobile */
+      width: 100%;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+  
+    .register-button:hover {
+      background-color:lightpink;
     }
   
     .login-page {
-      width: 100%; /* Full width on mobile */
-      margin: 0; /* Remove right margin */
+      /*position:relative;
+      background-image: url(/public/images/background-app.jpeg);
+      background-size: cover;*/
+      background:transparent;
+      height: 100vh;
+      width: 65vw;
+      overflow-x: hidden;
+      margin: 0 auto;
+      margin-right: 150px;
+      
+    }
+    
+    /* Style for the images */
+    .alpes {
+      position:relative;
+      top: 110px;
+      right: 50px;
+      max-width: 50%;
+      width: 50px;;
+      height: 50px;
+      opacity: 1;
     }
   
-    /* Style adjustments for images on mobile */
-    .alpes,
     .grotte-glace {
-      top: 0; /* Reset the top position */
-      right: 0; /* Reset the right position */
-      max-width: 100%; /* Full width on mobile */
-      width: auto; /* Let images adjust to content on mobile */
-      height: auto; /* Let images adjust to content on mobile */
+      position:relative;
+      top: 110px;
+      left: 50px;
+      max-width: 50%;
+      width: 50px;;
+      height: 50px;
+    }
+  
+    .snowfall {
+      position: fixed; /* Cover the entire viewport */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* Maintain aspect ratio and cover the viewport */
+      z-index: -1; /* Place the video behind other content */
     }
   
     .title-box {
-      bottom: 0; /* Reset the bottom position */
-      right: 0; /* Reset the right position */
-      width: 100%; /* Full width on mobile */
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+      padding: 20px; /* Padding inside the box */
+      text-align: center; /* Center-align text */
+      position:relative;
+      bottom:30px;
+      width: 120px;
+      right: 25px;
+      background-image: url(/public/images/background-snow1.jpeg);
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+    
+    .title-box h2 {
+      font-size: 25px; 
+      font-weight: bold;
+      margin-bottom: 10px;
+      background-image: linear-gradient(to right, #77bfe6, #f698c8);
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
     }
   
-    /* Adjust font size and background colors for text on mobile */
-    .title-box h2,
-    .title-box h1,
-    .explanation-box h1,
+    .title-box h1 {
+      font-size: 15px;
+      font-weight: bold;
+      margin-bottom: 10px;
+      background-image: linear-gradient(to right, #77bfe6, #f698c8);
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+    
+    .explanation-box{
+      background-color: rgba(245, 241, 241, 0.6);
+      border-radius: 10px; /* Rounded corners */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+      padding: 20px; /* Padding inside the box */
+      text-align: center; /* Center-align text */
+      position:relative;
+      width: 200px;
+      bottom:25px;
+      right:60px;
+    }
+  
+    .explanation-box h1{
+      font-size: 19px;
+      background-image: linear-gradient(to right, #0aa1f2, #ec60a9);
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+  
     .explanation-box p {
-      font-size: 18px;
-      background-image: none; /* Remove gradient background on mobile */
-      color: #333; /* Set text color */
-      background-clip: initial;
-      -webkit-background-clip: initial;
+      font-size: 17px;
+      background-image: linear-gradient(to right, #0aa1f2, #ec60a9);
+      color: transparent;
+      background-clip: text;
+      -webkit-background-clip: text;
+    }
+  
+    .explanation-box ul {
+      color:#fff;
     }
   }
   
