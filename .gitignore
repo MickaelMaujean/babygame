@@ -1,6 +1,5 @@
 babyenv/
 frontend/node_modules/
-
 frontend/package-lock.json
 backend/app/__pycache__
 .env.prod
