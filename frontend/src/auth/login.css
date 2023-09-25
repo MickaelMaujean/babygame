@@ -4,24 +4,6 @@
     width: auto;
   }
 
-  @media (max-width: 768px) {
-    .alpes {
-      position: absolute;
-      height: 5%;
-      width: 15%;
-      left:5%;
-      top:50%;
-    }
-  
-    .grotte-glace {
-      position: absolute;
-      height: 5%;
-      width: 15%;
-      right :20%;
-      top:50%;
-    }
-  }
-
 
 .login-container {
     max-width: 400px;
@@ -88,6 +70,7 @@
   
   /* Style for the images */
   .alpes {
+    display: none;
     position: absolute;
     height: 20%;
     width: 10%;
@@ -96,6 +79,7 @@
   }
 
   .grotte-glace {
+    display: none;
     position: absolute;
     height: 20%;
     width: 10%;
