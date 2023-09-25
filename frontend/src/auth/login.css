@@ -10,6 +10,154 @@ html, body {
 }
 
 .login-container {
+  max-width: 100px;
+  padding: 5px;
+  margin-top: 50%;
+  margin-left: 50%;
+  position: absolute;
+  bottom:210/4px;
+}
+
+h2 {
+  text-align: center;
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.login-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #f1aef8;
+  margin-bottom: 10px;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #0056b3;
+}
+
+.register-button {
+  width: 100%;
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.register-button:hover {
+  background-color:lightpink;
+}
+
+.login-page {
+  /*position:relative;
+  background-image: url(/public/images/background-app.jpeg);
+  background-size: cover;*/
+  background:transparent;
+  height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  
+}
+
+/* Style for the images */
+.alpes {
+  top: 0; /* Reset the top position */
+  right: 0; /* Reset the right position */
+  max-width: 100%; /* Full width on mobile */
+  width: auto; /* Let the image adjust to the container */
+  height: auto; /* Let the image adjust to the container */
+  margin: 10px auto; /* Center the image horizontally with some spacing */
+}
+
+.grotte-glace {
+  top: 0; /* Reset the top position */
+  left: 0; /* Reset the left position */
+  max-width: 100%; /* Full width on mobile */
+  width: auto; /* Let the image adjust to the container */
+  height: auto; /* Let the image adjust to the container */
+  margin: 10px auto; /* Center the image horizontally with some spacing */
+}
+
+.title-box {
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  padding: 20px; /* Padding inside the box */
+  text-align: center; /* Center-align text */
+  position:relative;
+  bottom:30px;
+  width: 120px;
+  right: 25px;
+  background-image: url(/public/images/background-snow1.jpeg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.title-box h2 {
+  font-size: 25px; 
+  font-weight: bold;
+  margin-bottom: 10px;
+  background-image: linear-gradient(to right, #77bfe6, #f698c8);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.title-box h1 {
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  background-image: linear-gradient(to right, #77bfe6, #f698c8);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.explanation-box{
+  background-color: rgba(245, 241, 241, 0.6);
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  padding: 20px; /* Padding inside the box */
+  text-align: center; /* Center-align text */
+  position:relative;
+  width: 200px;
+  bottom:25px;
+  right:60px;
+}
+
+.explanation-box h1{
+  font-size: 19px;
+  background-image: linear-gradient(to right, #0aa1f2, #ec60a9);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.explanation-box p {
+  font-size: 17px;
+  background-image: linear-gradient(to right, #0aa1f2, #ec60a9);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.explanation-box ul {
+  color:#fff;
+}
+
+@media (min-width: 768px) {
+
+.login-container {
     max-width: 400px;
     padding: 20px;
     margin-top: 130px;
@@ -167,160 +315,5 @@ html, body {
   .explanation-box ul {
     color:#fff;
   }
-
-  @media (max-width: 768px) {
-
-    html, body {
-      height: 100%;
-      width: 100%;
-      margin: 0;
-      padding: 0;
-    }
-
-    .login-container {
-      max-width: 100px;
-      padding: 5px;
-      margin-top: 50%;
-      margin-left: 50%;
-      position: absolute;
-      bottom:210/4px;
-    }
-    
-    h2 {
-      text-align: center;
-    }
-    
-    input {
-      width: 100%;
-      padding: 10px;
-      margin: 10px 0;
-      border: 1px solid #ccc;
-      border-radius: 3px;
-    }
-    
-    .login-button {
-      width: 100%;
-      padding: 10px;
-      background-color: #f1aef8;
-      margin-bottom: 10px;
-      color: #fff;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-    }
-    
-    .login-button:hover {
-      background-color: #0056b3;
-    }
-  
-    .register-button {
-      width: 100%;
-      padding: 10px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      border-radius: 3px;
-      cursor: pointer;
-    }
-  
-    .register-button:hover {
-      background-color:lightpink;
-    }
-  
-    .login-page {
-      /*position:relative;
-      background-image: url(/public/images/background-app.jpeg);
-      background-size: cover;*/
-      background:transparent;
-      height: 100vh;
-      width: 100%;
-      margin: 0 auto;
-      
-    }
-    
-    /* Style for the images */
-    .alpes {
-      top: 0; /* Reset the top position */
-      right: 0; /* Reset the right position */
-      max-width: 100%; /* Full width on mobile */
-      width: auto; /* Let the image adjust to the container */
-      height: auto; /* Let the image adjust to the container */
-      margin: 10px auto; /* Center the image horizontally with some spacing */
-    }
-  
-    .grotte-glace {
-      top: 0; /* Reset the top position */
-      left: 0; /* Reset the left position */
-      max-width: 100%; /* Full width on mobile */
-      width: auto; /* Let the image adjust to the container */
-      height: auto; /* Let the image adjust to the container */
-      margin: 10px auto; /* Center the image horizontally with some spacing */
-    }
-  
-    .title-box {
-      border-radius: 10px; /* Rounded corners */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
-      padding: 20px; /* Padding inside the box */
-      text-align: center; /* Center-align text */
-      position:relative;
-      bottom:30px;
-      width: 120px;
-      right: 25px;
-      background-image: url(/public/images/background-snow1.jpeg);
-      background-size: 100%;
-      background-repeat: no-repeat;
-    }
-    
-    .title-box h2 {
-      font-size: 25px; 
-      font-weight: bold;
-      margin-bottom: 10px;
-      background-image: linear-gradient(to right, #77bfe6, #f698c8);
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-    }
-  
-    .title-box h1 {
-      font-size: 15px;
-      font-weight: bold;
-      margin-bottom: 10px;
-      background-image: linear-gradient(to right, #77bfe6, #f698c8);
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-    }
-    
-    .explanation-box{
-      background-color: rgba(245, 241, 241, 0.6);
-      border-radius: 10px; /* Rounded corners */
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
-      padding: 20px; /* Padding inside the box */
-      text-align: center; /* Center-align text */
-      position:relative;
-      width: 200px;
-      bottom:25px;
-      right:60px;
-    }
-  
-    .explanation-box h1{
-      font-size: 19px;
-      background-image: linear-gradient(to right, #0aa1f2, #ec60a9);
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-    }
-  
-    .explanation-box p {
-      font-size: 17px;
-      background-image: linear-gradient(to right, #0aa1f2, #ec60a9);
-      color: transparent;
-      background-clip: text;
-      -webkit-background-clip: text;
-    }
-  
-    .explanation-box ul {
-      color:#fff;
-    }
-  }
+}
   
