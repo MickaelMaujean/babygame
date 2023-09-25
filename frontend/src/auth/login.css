@@ -1,158 +1,73 @@
 /* src/auth/Login.css */
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
+@media (max-width: 768px) {
+  html, body {
+    height: auto; /* Remove the fixed height on mobile */
+  }
 
-* {
-  box-sizing: border-box;
-}
+  .login-container {
+    max-width: 100%; /* Full width on mobile */
+    padding: 20px; /* Increase padding for better spacing on mobile */
+    margin-top: 10%; /* Adjust margin for better vertical alignment */
+    margin-left: auto; /* Center the container horizontally */
+    margin-right: auto; /* Center the container horizontally */
+    position: relative; /* Reset position properties */
+    bottom: auto; /* Reset bottom position */
+  }
 
-.login-container {
-  max-width: 100px;
-  padding: 5px;
-  margin-top: 50%;
-  margin-left: 50%;
-  position: absolute;
-  bottom:210/4px;
-}
+  /* Adjust font size and text color for mobile readability */
+  h2 {
+    text-align: center;
+    font-size: 20px;
+    color: #333; /* Your text color here */
+  }
 
-h2 {
-  text-align: center;
-}
+  /* Make the input fields and buttons full width on mobile */
+  input, .login-button, .register-button {
+    width: 100%;
+  }
 
-input {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 3px;
-}
+  /* Add margin and spacing for mobile layout */
+  input {
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+  }
 
-.login-button {
-  width: 100%;
-  padding: 10px;
-  background-color: #f1aef8;
-  margin-bottom: 10px;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
+  /* Style the buttons with your colors */
+  .login-button, .register-button {
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    color: #fff; /* Text color */
+  }
 
-.login-button:hover {
-  background-color: #0056b3;
-}
+  .login-button {
+    background-color: #f1aef8; /* Your button color here */
+  }
 
-.register-button {
-  width: 100%;
-  padding: 10px;
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
-  cursor: pointer;
-}
+  .login-button:hover {
+    background-color: #0056b3; /* Your button hover color here */
+  }
 
-.register-button:hover {
-  background-color:lightpink;
-}
+  .register-button {
+    background-color: #007bff; /* Your button color here */
+  }
 
-.login-page {
-  /*position:relative;
-  background-image: url(/public/images/background-app.jpeg);
-  background-size: cover;*/
-  background:transparent;
-  height: 100vh;
-  width: 100%;
-  margin: 0 auto;
-  
-}
+  .register-button:hover {
+    background-color: lightpink; /* Your button hover color here */
+  }
 
-/* Style for the images */
-.alpes {
-  top: 0; /* Reset the top position */
-  right: 0; /* Reset the right position */
-  max-width: 100%; /* Full width on mobile */
-  width: auto; /* Let the image adjust to the container */
-  height: auto; /* Let the image adjust to the container */
-  margin: 10px auto; /* Center the image horizontally with some spacing */
-}
-
-.grotte-glace {
-  top: 0; /* Reset the top position */
-  left: 0; /* Reset the left position */
-  max-width: 100%; /* Full width on mobile */
-  width: auto; /* Let the image adjust to the container */
-  height: auto; /* Let the image adjust to the container */
-  margin: 10px auto; /* Center the image horizontally with some spacing */
-}
-
-.title-box {
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
-  padding: 20px; /* Padding inside the box */
-  text-align: center; /* Center-align text */
-  position:relative;
-  bottom:30px;
-  width: 120px;
-  right: 25px;
-  background-image: url(/public/images/background-snow1.jpeg);
-  background-size: 100%;
-  background-repeat: no-repeat;
-}
-
-.title-box h2 {
-  font-size: 25px; 
-  font-weight: bold;
-  margin-bottom: 10px;
-  background-image: linear-gradient(to right, #77bfe6, #f698c8);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-
-.title-box h1 {
-  font-size: 15px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  background-image: linear-gradient(to right, #77bfe6, #f698c8);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-
-.explanation-box{
-  background-color: rgba(245, 241, 241, 0.6);
-  border-radius: 10px; /* Rounded corners */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
-  padding: 20px; /* Padding inside the box */
-  text-align: center; /* Center-align text */
-  position:relative;
-  width: 200px;
-  bottom:25px;
-  right:60px;
-}
-
-.explanation-box h1{
-  font-size: 19px;
-  background-image: linear-gradient(to right, #0aa1f2, #ec60a9);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-
-.explanation-box p {
-  font-size: 17px;
-  background-image: linear-gradient(to right, #0aa1f2, #ec60a9);
-  color: transparent;
-  background-clip: text;
-  -webkit-background-clip: text;
-}
-
-.explanation-box ul {
-  color:#fff;
+  /* Styles for images on mobile */
+  .alpes, .grotte-glace {
+    top: 0; /* Reset top position */
+    right: 0; /* Reset right position */
+    max-width: 100%; /* Full width on mobile */
+    width: auto; /* Let images adjust to container width */
+    height: auto; /* Let images adjust to container height */
+    margin: 10px auto; /* Center images horizontally with spacing */
+  }
 }
 
 @media (min-width: 768px) {
