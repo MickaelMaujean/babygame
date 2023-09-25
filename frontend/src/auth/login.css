@@ -167,4 +167,53 @@ html, body {
   .explanation-box ul {
     color:#fff;
   }
+
+  @media (max-width: 768px) {
+    .login-container {
+      max-width: 100%; /* Full width on mobile */
+      padding: 20px;
+      margin: 0 auto; /* Center the container horizontally */
+      position: relative;
+      bottom: 0; /* Reset the bottom position */
+    }
+  
+    /* You may want to remove or adjust the following styles for mobile */
+    .login-button,
+    .register-button {
+      width: auto; /* Let buttons adjust to content on mobile */
+    }
+  
+    .login-page {
+      width: 100%; /* Full width on mobile */
+      margin: 0; /* Remove right margin */
+    }
+  
+    /* Style adjustments for images on mobile */
+    .alpes,
+    .grotte-glace {
+      top: 0; /* Reset the top position */
+      right: 0; /* Reset the right position */
+      max-width: 100%; /* Full width on mobile */
+      width: auto; /* Let images adjust to content on mobile */
+      height: auto; /* Let images adjust to content on mobile */
+    }
+  
+    .title-box {
+      bottom: 0; /* Reset the bottom position */
+      right: 0; /* Reset the right position */
+      width: 100%; /* Full width on mobile */
+    }
+  
+    /* Adjust font size and background colors for text on mobile */
+    .title-box h2,
+    .title-box h1,
+    .explanation-box h1,
+    .explanation-box p {
+      font-size: 18px;
+      background-image: none; /* Remove gradient background on mobile */
+      color: #333; /* Set text color */
+      background-clip: initial;
+      -webkit-background-clip: initial;
+    }
+  }
   
