@@ -71,21 +71,11 @@
     
     /* Style for the images */
     .alpes {
-      top: 0; /* Reset the top position */
-      right: 0; /* Reset the right position */
-      max-width: 100%; /* Full width on mobile */
-      width: auto; /* Let the image adjust to the container */
-      height: auto; /* Let the image adjust to the container */
-      margin: 10px auto; /* Center the image horizontally with some spacing */
+      display: none;
     }
   
     .grotte-glace {
-      top: 0; /* Reset the top position */
-      left: 0; /* Reset the left position */
-      max-width: 100%; /* Full width on mobile */
-      width: auto; /* Let the image adjust to the container */
-      height: auto; /* Let the image adjust to the container */
-      margin: 10px auto; /* Center the image horizontally with some spacing */
+      display: none;
     }
   
     .title-box {
