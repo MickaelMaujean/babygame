@@ -1,12 +1,21 @@
 /* src/auth/Login.css */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 .login-container {
     max-width: 400px;
-    margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 130px;
+    margin-left: 260px;
+    position: relative;
+    bottom:210px;
   }
   
   h2 {
@@ -48,5 +57,114 @@
 
   .register-button:hover {
     background-color:lightpink;
+  }
+
+  .login-page {
+    /*position:relative;
+    background-image: url(/public/images/background-app.jpeg);
+    background-size: cover;*/
+    background:transparent;
+    height: 100vh;
+    width: 65vw;
+    overflow-x: hidden;
+    margin: 0 auto;
+    margin-right: 150px;
+    
+  }
+  
+  /* Style for the images */
+  .alpes {
+    position:relative;
+    top: 450px;
+    right: 200px;
+    max-width: 50%;
+    width: 200px;;
+    height: 200px;
+    opacity: 1;
+  }
+
+  .grotte-glace {
+    position:relative;
+    top: 450px;
+    left: 190px;
+    max-width: 50%;
+    width: 210px;;
+    height: 200px;
+  }
+
+  .snowfall {
+    position: fixed; /* Cover the entire viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Maintain aspect ratio and cover the viewport */
+    z-index: -1; /* Place the video behind other content */
+  }
+
+  .title-box {
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 20px; /* Padding inside the box */
+    text-align: center; /* Center-align text */
+    position:relative;
+    bottom:130px;
+    width: 600px;
+    right: 140px;
+    background-image: url(/public/images/background-snow1.jpeg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  
+  .title-box h2 {
+    font-size: 25px; 
+    font-weight: bold;
+    margin-bottom: 10px;
+    background-image: linear-gradient(to right, #77bfe6, #f698c8);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  .title-box h1 {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background-image: linear-gradient(to right, #77bfe6, #f698c8);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+  
+  .explanation-box{
+    background-color: rgba(245, 241, 241, 0.6);
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 20px; /* Padding inside the box */
+    text-align: center; /* Center-align text */
+    position:relative;
+    width: 800px;
+    bottom:90px;
+    right:240px;
+  }
+
+  .explanation-box h1{
+    font-size: 19px;
+    background-image: linear-gradient(to right, #0aa1f2, #ec60a9);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  .explanation-box p {
+    font-size: 17px;
+    background-image: linear-gradient(to right, #0aa1f2, #ec60a9);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+  }
+
+  .explanation-box ul {
+    color:#fff;
   }
   
