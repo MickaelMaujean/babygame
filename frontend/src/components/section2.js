@@ -81,15 +81,15 @@ function Section2() {
       <h2>Let's vote !</h2>
       <div className='section2-fields'>
       <div>
-        <label>First Name:</label>
+        <label>Prénom:</label>
         <input type="text" value={first_name} onChange={(e) => setFirstName(e.target.value)} />
       </div>
       <div>
-        <label>Last Name:</label>
+        <label>Nom:</label>
         <input type="text" value={last_name} onChange={(e) => setLastName(e.target.value)} />
       </div>
       <div>
-        <label>Gender:</label>
+        <label>Sexe:</label>
         <select value={gender} onChange={(e) => setGender(e.target.value)}>
         <option value="">Select Gender</option> 
         <option value="Boy">Boy</option>
@@ -97,19 +97,19 @@ function Section2() {
         </select>
       </div>
       <div>
-        <label>Size:</label>
+        <label>Taille:</label>
         <input type="number" value={size} onChange={(e) => setSize(e.target.value)} />
       </div>
       <div>
-        <label>Weight:</label>
+        <label>Poids:</label>
         <input type="number" value={weight} onChange={(e) => setWeight(e.target.value)} />
       </div>
       <div>
-        <label>Birthday Date:</label>
+        <label>Jour de naissance:</label>
         <input type="date" value={selectedDate} onChange={(e) => setSelectedDate(e.target.value)} />
       </div>
       <div>
-        <label>Birthday Time:</label>
+        <label>Heure de naissane:</label>
         <input type="time" value={selectedTime} onChange={(e) => setSelectedTime(e.target.value)} />
       </div>
       </div>

@@ -7,8 +7,6 @@ const apiInstance = axios.create({
   baseURL: apiBaseUrl, // FastAPI backend URL
 });
 
-const hardcodedToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2OTUyODIyMzV9.HnlahmsFUp_rXnbwpsUTAbRX7Pu0kAQaeYsL3fJzOfs';
-
 // Include a function to set the authorization token for the API instance
 apiInstance.interceptors.request.use(
   async (config) => {
@@ -42,7 +40,7 @@ apiInstance.interceptors.request.use(
 
 export const fetchData = async () => {
   try {
-    const response = await api.get('/votes'); // your API endpoint
+    const response = await api.get('/votes');
     return response.data;
   } catch (error) {
     console.error('Error fetching data:', error);

@@ -1,7 +1,11 @@
 /* src/components/Section2.css */
 .section2 {
-    background-color: #88c7ee; /* Light pink background */
-    color: white;              /* White text color */
+    background-color: #88c7ee;
+    background-image: url(/public/images/background-section2.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: rgb(1, 1, 1);
+    font-weight: bold;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

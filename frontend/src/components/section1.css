@@ -1,8 +1,13 @@
 /* src/components/Section1.css */
-/* src/components/Section2.css */
+
 .section1 {
-  background-color: #FFB6C1; /* Light pink background */
-  color: white;              /* White text color */
+  background-color: #FFB6C1;
+  background-image: url(/public/images/background-section1.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  color: white;
+  font-weight: bold;           
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
