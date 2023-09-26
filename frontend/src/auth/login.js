@@ -124,9 +124,9 @@ function Login({ setIsLoggedIn }) {
           <h1>Pour participer au jeu merci de t'inscrire avec ton email et un mot de passe dans un premier temps et te connecter ensuite</h1>
           <p> &#33;&#33;&#33;&#33; La deadline pour voter est le 25 décembre - Seuls les participants ayant deviné le bon sexe seront considérés pour les récompenses</p>
           <ul>
-            <li>Une récompense pour le plus proche du poids exact</li>
-            <li>Une récompense pour le plus proche de la taille exacte</li>
-            <li>Une récompense pour le plus proche de la naissance exacte</li>
+            <li>Une récompense pour le plus proche du poids</li>
+            <li>Une récompense pour le plus proche de la taille</li>
+            <li>Une récompense pour le plus proche de la naissance</li>
           </ul>
           </div>
           <input
