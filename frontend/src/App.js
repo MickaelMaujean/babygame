@@ -43,6 +43,9 @@ function App() {
   return (
     <Router>
       <div className="App">
+      <video className="snow" autoPlay loop muted>
+      <source src="https://babygame.s3.eu-central-1.amazonaws.com/snowcountry.mp4" type="video/mp4" />
+      </video>
         <Routes>
           {/* Use the custom initialRedirect function */}
           <Route path="/" element={initialRedirect()} />

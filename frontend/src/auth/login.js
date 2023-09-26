@@ -110,7 +110,7 @@ function Login({ setIsLoggedIn }) {
 
   return (
     <div className="login-page">
-      <video className="snowfall" autoPlay loop muted>
+      <video className="lofoten" autoPlay loop muted>
       <source src="https://babygame.s3.eu-central-1.amazonaws.com/lofoten.mp4" type="video/mp4" />
       </video>
       <img src="/images/alpes.jpg" className="alpes" alt="Image 1" />
