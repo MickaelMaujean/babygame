@@ -111,7 +111,7 @@ function Login({ setIsLoggedIn }) {
   return (
     <div className="login-page">
       <video className="snowfall" autoPlay loop muted>
-      <source src="/videos/snow.mp4" type="video/mp4" />
+      <source src="/videos/snowfall.mp4" type="video/mp4" />
       </video>
       <img src="/images/alpes.jpg" className="alpes" alt="Image 1" />
       <img src="/images/grotte-glace.jpg" className="grotte-glace" alt="Image 2" />
