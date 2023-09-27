@@ -109,8 +109,6 @@ function Login({ setIsLoggedIn }) {
       <video className="lofoten" autoPlay loop muted>
       <source src="https://babygame.s3.eu-central-1.amazonaws.com/lofoten.mp4" type="video/mp4" />
       </video>
-      <img src="/images/baby.jpg" className="baby-image" alt="Image 1" />
-      <img src="/images/alpes.jpg" className="alpes-image" alt="Image 2" />
       <div className="login-container">
         <div className="title-box">
           <h2>&#128153; Grand jeu concours &#128151;</h2>
@@ -125,6 +123,8 @@ function Login({ setIsLoggedIn }) {
             <li>Une récompense pour le plus proche de la naissance</li>
           </ul>
           </div>
+          <img src="/images/baby.jpg" className="baby-image" alt="Image 1" />
+      <img src="/images/alpes.jpg" className="alpes-image" alt="Image 2" />
           <input
             type="text"
             placeholder="Email"

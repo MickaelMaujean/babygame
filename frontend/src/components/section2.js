@@ -39,15 +39,15 @@ function Section2() {
     try {
       // Combine the selected date and time into a single string
       const dateTimeToSend = `${selectedDate} ${selectedTime}`;
-      const sanitizedSize = size.replace(",", ".");
-      const sanitizedWeight = weight.replace(",", ".");
+      const dotedSize = size.replace(",", ".");
+      const dotedWeight = weight.replace(",", ".");
 
       console.log('Sending data:', {
         first_name,
         last_name,
         gender,
-        size: parseFloat(sanitizedSize),
-        weight: parseFloat(sanitizedWeight),
+        size: parseFloat(dotedSize),
+        weight: parseFloat(dotedWeight),
         birthday: dateTimeToSend,
       });
   
@@ -64,8 +64,8 @@ function Section2() {
           first_name,
           last_name,
           gender,
-          size: parseFloat(sanitizedSize),
-          weight: parseFloat(sanitizedWeight),
+          size: parseFloat(dotedSize),
+          weight: parseFloat(dotedWeight),
           birthday: dateTimeToSend,
         });
   
