@@ -263,7 +263,7 @@ return (
 </td>
 ))}
 <td>
-<button onClick={() => handleEditClick(item)}>Edit</button> {/* Add "Edit" button */}
+<button onClick={() => handleEditClick(item)}>Modifier</button> {/* Add "Edit" button */}
 </td>
 </tr>
 ))}
