@@ -21,7 +21,7 @@ function Login({ setIsLoggedIn }) {
   useEffect(() => {
     // Use useEffect to automatically clear the success message after a delay
     if (LoginMessage) {
-      const timerId = setTimeout(clearLoginMessage, 5000); // 10 seconds (10,000 milliseconds)
+      const timerId = setTimeout(clearLoginMessage, 5000); // 5 seconds
       
       // Clean up the timer when the component unmounts or when successMessage changes
       return () => {
@@ -50,17 +50,14 @@ function Login({ setIsLoggedIn }) {
       if (response.status == 200) {
 
         const userId = response.data.id;
-        // Store the userId in localStorage
         localStorage.setItem('userId', userId);
 
-        console.log('Token before storing:', token);
         const token = response.data.token;
 
         localStorage.setItem('token', token.toString());
-        console.log('Token after storing:', localStorage.getItem('token'));
-
         setIsLoggedIn(true);
         navigate('/');
+
       } else {
         setLoginMessage('Email ou mot de passe invalide');
       }
@@ -96,7 +93,6 @@ function Login({ setIsLoggedIn }) {
       });
   
       if (response.status === 201) {
-          // Registration successful
         setRegistrationMessage('Incription validée, connectes toi !');
       } else {
           // Registration failed
@@ -113,8 +109,8 @@ function Login({ setIsLoggedIn }) {
       <video className="lofoten" autoPlay loop muted>
       <source src="https://babygame.s3.eu-central-1.amazonaws.com/lofoten.mp4" type="video/mp4" />
       </video>
-      <img src="/images/alpes.jpg" className="alpes" alt="Image 1" />
-      <img src="/images/grotte-glace.jpg" className="grotte-glace" alt="Image 2" />
+      <img src="/images/baby.jpg" className="baby-image" alt="Image 1" />
+      <img src="/images/alpes.jpg" className="alpes-image" alt="Image 2" />
       <div className="login-container">
         <div className="title-box">
           <h2>&#128153; Grand jeu concours &#128151;</h2>

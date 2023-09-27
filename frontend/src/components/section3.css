@@ -12,13 +12,13 @@
   text-align: center;
 }
 
-.section3 input[type="text"] {
+/*.section3 input[type="text"] {
   padding: 10px;
   width: 100%;
   border: 1px solid #f00707;
   border-radius: 4px;
   margin-top: 5px;
-}
+}*/
 
 .section3 button {
   padding: 10px 20px;
@@ -37,10 +37,13 @@
 }
 
 .section3-table {
-  display: flex;
+  position: relative;
+  width: 10%;
+  /*display: flex;
   justify-content: center;
-  align-items: center;
-  margin-left: 20%;
+  align-items: center;*/
+  margin-left: 70%;
+  margin-right: 60%;
   margin-top: 20px;
 }
 
@@ -67,12 +70,11 @@ td {
 
 .edit-popup {
   position: fixed;
-  top: 0;
-  left: 0;
+  top: 20%;
+  left:25%;
   right: 0;
-  width: 100%;
-  height: 100%;
-  /*background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  width: 50%;
+  height: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -83,21 +85,39 @@ td {
   text-align:center;
   position:absolute;
   top: 10%;
-  left: 46%;
   margin: 0;
   padding: 10px;
   background: linear-gradient(to left, rgb(92, 148, 239), rgb(248, 177, 219));
 
   font-size: 24px; /* Increase font size */
   font-weight: bold; /* Make it bold */
-  color: #000;
+  color: #ffffff;
 }
+
+.edit-containers {
+  display: flex;
+  flex-direction:row;
+  margin-bottom: 5%;
+  margin-top: 5%;
+  align-items: center;
+}
+
+.edit-containers label {
+  margin-right: 10px; /* Add a small gap between label and input */
+}
+
+.edit-containers input,
+.edit-containers select {
+  padding: 5px; /* Adjust padding for inputs/selects */
+  border: 1px solid #ccc; /* Add borders to inputs/selects */
+  border-radius: 4px; /* Add rounded corners to inputs/selects */
+}
+
 
 .update-cancel {
   text-align: center; /* Center the buttons horizontally */
   position: absolute;
-  bottom: 10%; /* Position the container at the bottom */
-  left: 0; /* Optionally, align it to the left */
+  bottom: 5%; /* Position the container at the bottom *
   width: 100%; /* Make it span the full width */
   padding: 10px; /* Add padding to space it from the content */ /* Add background color or styles as needed */
 }

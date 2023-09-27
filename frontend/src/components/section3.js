@@ -72,7 +72,7 @@ const columnMappings = {
 'Prénom': 'first_name',
 'Nom de famille': 'last_name',
 'Sexe': 'gender',
-'Taille(cm)': 'size',
+'Taille (cm)': 'size',
 'Poids (kg)': 'weight',
 'Birthday': 'birthday'
 };
@@ -177,54 +177,63 @@ return null;
 
 
 const renderEditPopup = () => {
-return (
-<div className="edit-popup">
-<h3>Edit Vote</h3>
-<div>
-<label>First Name:</label>
-<input
-type="text"
-value={editedFields.first_name}
-onChange={(e) => handleFieldChange('first_name', e.target.value)}
-/>
-<label>Last Name:</label>
-<input
-type="text"
-value={editedFields.last_name}
-onChange={(e) => handleFieldChange('last_name', e.target.value)}
-/>
-<label>Gender:</label>
-<select
-    value={editedFields.gender} onChange={(e) => handleFieldChange('gender', e.target.value)}>
-    <option value="">Select Gender</option>
-    <option value="Boy">Boy</option>
-    <option value="Girl">Girl</option>
-  </select>
-<label>Size:</label>
-<input
-type="number"
-value={editedFields.size}
-onChange={(e) => handleFieldChange('size', e.target.value)}
-/>
-<label>Weight:</label>
-<input
-type="number"
-value={editedFields.weight}
-onChange={(e) => handleFieldChange('weight', e.target.value)}
-/>
-<label>Birthday:</label>
-<input
-type="datetime-local"
-value={`${editedFields.birthday}T${editedFields.birthtime}`}
-onChange={(e) => handleFieldChange('birthday', e.target.value)}
-/>
-</div>
-<div className="buttons-container">
-<button onClick={handleUpdateClick}>Update</button>
-<button onClick={() => setEditVote(null)}>Cancel</button>
-</div>
-</div>
-);
+  rreturn (
+    <div className="edit-popup">
+      <h3>Edit Vote</h3>
+      <div>
+        
+          <label>First Name:</label>
+          <input
+            type="text"
+            value={editedFields.first_name}
+            onChange={(e) => handleFieldChange('first_name', e.target.value)}
+          />
+        
+        
+          <label>Last Name:</label>
+          <input
+            type="text"
+            value={editedFields.last_name}
+            onChange={(e) => handleFieldChange('last_name', e.target.value)}
+          />
+        
+        
+          <label>Gender:</label>
+          <select
+            value={editedFields.gender}
+            onChange={(e) => handleFieldChange('gender', e.target.value)}
+          >
+            <option value="">Select Gender</option>
+            <option value="Boy">Boy</option>
+            <option value="Girl">Girl</option>
+          </select>
+          <label>Size:</label>
+          <input
+            type="number"
+            value={editedFields.size}
+            onChange={(e) => handleFieldChange('size', e.target.value)}
+          />
+          <label>Weight:</label>
+          <input
+            type="number"
+            value={editedFields.weight}
+            onChange={(e) => handleFieldChange('weight', e.target.value)}
+          />
+          <label>Birthday:</label>
+          <input
+            type="datetime-local"
+            value={`${editedFields.birthday}T${editedFields.birthtime}`}
+            onChange={(e) => handleFieldChange('birthday', e.target.value)}
+          />
+      </div>
+      <div className="buttons-container">
+        <button onClick={handleUpdateClick}>Update</button>
+        <button onClick={() => setEditVote(null)}>Cancel</button>
+      </div>
+    </div>
+  );
+  
+  
 };
 
 
@@ -273,49 +282,61 @@ return (
 {editVote && (
 <div className="edit-popup">
 <div className='edit-title'>
-<h3>Edit Vote</h3>
+<h3>Modifies ton Vote</h3>
 </div>
 <div>
-<label>First Name:</label>
+<div className='edit-containers'>
+<label>Prénom:</label>
 <input
 type="text"
 value={editedFields.first_name}
 onChange={(e) => handleFieldChange('first_name', e.target.value)}
 />
-<label>Last Name:</label>
+</div>
+<div className='edit-containers'>
+<label>Nom:</label>
 <input
 type="text"
 value={editedFields.last_name}
 onChange={(e) => handleFieldChange('last_name', e.target.value)}
 />
-<label>Gender:</label>
+</div>
+<div className='edit-containers'>
+<label>Sexe:</label>
 <input
 type="text"
 value={editedFields.gender}
 onChange={(e) => handleFieldChange('gender', e.target.value)}
 />
-<label>Size:</label>
+</div>
+<div className='edit-containers'>
+<label>Taille:</label>
 <input
 type="number"
 value={editedFields.size}
 onChange={(e) => handleFieldChange('size', e.target.value)}
 />
-<label>Weight:</label>
+</div>
+<div className='edit-containers'>
+<label>Poids:</label>
 <input
 type="number"
 value={editedFields.weight}
 onChange={(e) => handleFieldChange('weight', e.target.value)}
 />
-<label>Birthday:</label>
+</div>
+<div className='edit-containers'>
+<label>Naissance:</label>
 <input
 type="datetime-local"
 value={`${editedFields.birthday}T${editedFields.birthtime}`}
 onChange={(e) => handleFieldChange('birthday', e.target.value)}
 />
 </div>
+</div>
 <div className='update-cancel'>
-<button onClick={handleUpdateClick}>Update</button>
-<button onClick={() => setEditVote(null)}>Cancel</button>
+<button onClick={handleUpdateClick}>Modifier</button>
+<button onClick={() => setEditVote(null)}>Annuler</button>
 {errorMessage && <div className="error-message">{errorMessage}</div>}
 </div>
 </div>

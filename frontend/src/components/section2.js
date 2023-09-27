@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './section2.css';
 import apiInstance from '../api/api';
@@ -20,18 +20,34 @@ function Section2() {
 
   const apiBaseUrl = process.env.REACT_APP_BACKEND_URL;
 
-  
+  const clearResponseMessage = () => {
+    setResponseMessage('');
+  };
+  useEffect(() => {
+    // Use useEffect to automatically clear the success message after a delay
+    if (responseMessage) {
+      const timerId = setTimeout(clearResponseMessage, 5000); // 5 seconds
+      
+      // Clean up the timer when the component unmounts or when successMessage changes
+      return () => {
+        clearTimeout(timerId);
+      };
+    }
+  }, [responseMessage]);
 
   const handleSend = async () => {
     try {
       // Combine the selected date and time into a single string
       const dateTimeToSend = `${selectedDate} ${selectedTime}`;
+      const sanitizedSize = size.replace(",", ".");
+      const sanitizedWeight = weight.replace(",", ".");
+
       console.log('Sending data:', {
         first_name,
         last_name,
         gender,
-        size: parseFloat(size),
-        weight: parseFloat(weight),
+        size: parseFloat(sanitizedSize),
+        weight: parseFloat(sanitizedWeight),
         birthday: dateTimeToSend,
       });
   
@@ -48,8 +64,8 @@ function Section2() {
           first_name,
           last_name,
           gender,
-          size: parseFloat(size),
-          weight: parseFloat(weight),
+          size: parseFloat(sanitizedSize),
+          weight: parseFloat(sanitizedWeight),
           birthday: dateTimeToSend,
         });
   
@@ -60,7 +76,7 @@ function Section2() {
           setResponseMessage('Merci votre vote a bien été pris en compte');
         } else {
           // For other status codes, you can set an error message or handle it as needed
-          setResponseMessage('An error occurred. Please try again.');
+          setResponseMessage('Vote pas conforme, essayes encore !');
         }
       } else {
         // Handle the case when the token is not found in localStorage
@@ -70,7 +86,7 @@ function Section2() {
     } catch (error) {
       console.error('Error sending data:', error);
       // Handle the error and set an appropriate error message
-      setResponseMessage('An error occurred. Please try again.');
+      setResponseMessage('Vote pas conforme, essayes encore !');
     }
   };
   
