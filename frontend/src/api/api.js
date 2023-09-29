@@ -1,5 +1,5 @@
 // src/api/api.js
-import axios from 'axios';
+import axios from "axios";
 
 const apiBaseUrl = process.env.REACT_APP_BACKEND_URL;
 
@@ -11,8 +11,8 @@ const apiInstance = axios.create({
 apiInstance.interceptors.request.use(
   async (config) => {
     try {
-      const token = await localStorage.getItem('token'); // Use await here
-      console.log('GETToken:', token);
+      const token = await localStorage.getItem("token"); // Use await here
+      console.log("GETToken:", token);
       if (token) {
         // Initialize config.headers if not already defined
         if (!config.headers) {
@@ -22,13 +22,12 @@ apiInstance.interceptors.request.use(
         if (!config.headers.common) {
           config.headers.common = {};
         }
-        config.headers.common['Authorization'] = `Bearer ${token}`;
-      }
-      else {
-        console.warn('Token not found in localStorage.');
+        config.headers.common["Authorization"] = `Bearer ${token}`;
+      } else {
+        console.warn("Token not found in localStorage.");
       }
     } catch (error) {
-      console.error('Error getting token from localStorage:', error);
+      console.error("Error getting token from localStorage:", error);
       throw error;
     }
     return config;
@@ -40,10 +39,10 @@ apiInstance.interceptors.request.use(
 
 export const fetchData = async () => {
   try {
-    const response = await api.get('/votes');
+    const response = await api.get("/votes");
     return response.data;
   } catch (error) {
-    console.error('Error fetching data:', error);
+    console.error("Error fetching data:", error);
     throw error;
   }
 };
